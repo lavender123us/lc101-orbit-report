@@ -12,4 +12,22 @@ export class Satellite {
         this.operational = operational;
         this.launchDate = launchDate;
     }
+
+    ngOnInit() {
+    }
+
+    shouldShowWarning(): boolean {
+        this.type = this.type.toLowerCase();
+        if (this.type.includes('Space Debris')) {
+            return true;
+        } else {
+            return false;
+        }
+        // if (this.type.includes('Space Debris') || this.type.includes('space debris') || 
+        // this.type.includes('Space debris') || this.type.includes('space Debris')) {
+        //     return true;
+        // } else {
+        //     return false;
+        // }
+    }    
 }
