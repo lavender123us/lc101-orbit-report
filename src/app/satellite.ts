@@ -16,18 +16,12 @@ export class Satellite {
     ngOnInit() {
     }
 
-    shouldShowWarning(): boolean {
-        this.type = this.type.toLowerCase();
-        if (this.type.includes('Space Debris')) {
+    shouldShowWarning(): boolean { 
+        if (this.type == 'Space Debris' || this.type == 'space debris' || 
+        this.type == 'Space debris' || this.type == 'space Debris') {
             return true;
         } else {
             return false;
-        }
-        // if (this.type.includes('Space Debris') || this.type.includes('space debris') || 
-        // this.type.includes('Space debris') || this.type.includes('space Debris')) {
-        //     return true;
-        // } else {
-        //     return false;
-        // }
-    }    
+        }        
+    }
 }

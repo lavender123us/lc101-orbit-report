@@ -31,10 +31,10 @@ td {
     background-color: lightblue;
 }
 
-tr:nth-child(even) td {
+/* tr:nth-child(even) td {
     background-color: lightblue;
-}
+} */
 
-tr:nth-child(odd) td {
+/* tr:nth-child(odd) td {
     background-color: lightseagreen;
-}
+}  */

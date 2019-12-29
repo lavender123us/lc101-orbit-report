@@ -1,4 +1,5 @@
 <!-- <p>orbit-list works!</p> -->
+<!-- <app-orbit-list [satellites]="displayList"></app-orbit-list> -->
 
 <h3>Orbit Report</h3>
 <table>
@@ -12,9 +13,9 @@
    <!-- TODO: put <tr *ngFor=""></tr> here -->
    <tr *ngFor = 'let satellite of satellites' class="header-row">
     <td>{{ satellite.name }}</td>
-    <td class='warning'>{{ satellite.type }}</td>
+    <td class='warning'[class.warning]="satellite.shouldShowWarning()">{{ satellite.type }}</td>
     <!-- [class.warning]="this.type.includes('Space Debris')" -->
-    <!-- [class.warning]='shouldShowWarning' -->
+    <!-- [class.warning]='shouldShowWarning==true' -->
     <td>{{ satellite.operational }}</td>
     <td>{{ satellite.orbitType }}</td>
     <td>{{ satellite.launchDate }}</td>
